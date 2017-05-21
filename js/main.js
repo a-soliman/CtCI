@@ -11,3 +11,4 @@ function isPrime(n) {
 console.log('isPrime : ' + isPrime(11));
 
 //=============================================
+// 2. nFactorial
