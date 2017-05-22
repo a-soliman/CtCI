@@ -23,3 +23,6 @@ function factorial(n) {
 console.log('factorial : ' + factorial(5))
 
 //=============================================
+
+
+// 3. string permutation
