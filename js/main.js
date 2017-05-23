@@ -56,3 +56,39 @@ console.log('stringPermutation : ' + stringPermutation('abc'));
   4. Given a smaller str A and a bigger str B. design an algorithm to find all the permutations in the shorter str whith in the longer one, 
   Print the location of each permutation
 */
+
+function matchPremutations(strA, strB) {
+  var len = strA.length;
+  var outPut = [];
+  //find premutations in A
+  var results = {};
+
+  function findPremutations(str, prefix) {
+    //base case
+    if(str.length <= 0) {
+      results[prefix] = true;
+    }
+    
+    else {
+      for(var i = 0; i < str.length; i++) {
+        var rem = str.substring(0, i) + str.substring(i + 1);
+        findPremutations(rem, prefix + str.charAt(i));
+      }
+    }
+  }
+  findPremutations(strA,'');
+  
+  //loop through B and match
+  for(i = 0; i < strB.length -3; i++) {
+    var tempStr = strB.substring(i, i + len);
+    if(results[tempStr]) {
+      outPut.push(i);
+    }
+  }
+  return outPut;
+}
+
+console.log('matchPremutations : ' + matchPremutations('abbc','cbabadcbbabbcbabaabccbabc'));
+
+/*
+======================================================================================
