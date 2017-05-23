@@ -53,3 +53,6 @@ console.log('stringPermutation : ' + stringPermutation('abc'));
 
 /*
 ======================================================================================
+  4. Given a smaller str A and a bigger str B. design an algorithm to find all the permutations in the shorter str whith in the longer one, 
+  Print the location of each permutation
+*/
