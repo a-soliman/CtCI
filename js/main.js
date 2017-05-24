@@ -96,3 +96,44 @@ console.log('matchPremutations : ' + matchPremutations('abbc','cbabadcbbabbcbaba
   
   - time: O(n), space: O(1) => there for no hash table allowed 
 */
+
+function findMatch(a, b) {
+  var start = 0;
+  var currentIndex, currentElement, result= '';
+  
+  function search(searchElement, minIndex) {
+    var maxIndex = a.length-1;
+      
+    while(minIndex <= maxIndex) {
+      currentIndex = Math.floor((minIndex + maxIndex) /2);
+      currentElement = a[currentIndex];
+      
+      if(currentElement < searchElement) {
+        minIndex = currentIndex +1;
+      }
+      
+      else if(currentElement > searchElement) {
+        maxIndex = currentIndex -1;
+      }
+      else {
+        result += (currentElement + ', ');
+        start = currentIndex;
+        return;
+      }
+    }
+    return -1; 
+    
+  }
+  
+  for(var i = 0; i < b.length; i++) {
+    search(b[i], start);
+  }
+  
+  return result;
+    
+}
+
+console.log('findMatch: ', findMatch([13,27,35,40,49,55,59],[17,35,39,40,55,58,60]));
+
+/*
+======================================================================================
