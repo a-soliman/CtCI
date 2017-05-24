@@ -92,3 +92,7 @@ console.log('matchPremutations : ' + matchPremutations('abbc','cbabadcbbabbcbaba
 
 /*
 ======================================================================================
+ 5. Given two sorted arrys, find the number of elements in common. The arrys are of the same length.
+  
+  - time: O(n), space: O(1) => there for no hash table allowed 
+*/
