@@ -137,3 +137,5 @@ console.log('findMatch: ', findMatch([13,27,35,40,49,55,59],[17,35,39,40,55,58,6
 
 /*
 ======================================================================================
+  6. Implement an algorithm to determine if a string has all unique characters. What is you can not use additional data-structure?
+*/
