@@ -154,3 +154,8 @@ function isUnique(str) {
 }
 
 console.log('isUnique: ' , isUnique('ahmed'))
+
+/*
+======================================================================================
+  7. Given two strings, write a method to decide if one is permutation of the other one
+*/
