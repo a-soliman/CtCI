@@ -159,3 +159,28 @@ console.log('isUnique: ' , isUnique('ahmed'))
 ======================================================================================
   7. Given two strings, write a method to decide if one is permutation of the other one
 */
+
+function isPermutation(str1, str2) {
+  //check the length
+  if(str1.length !== str2.length) {
+    return false;
+  }
+  
+  else {
+    var hash = {};
+    
+    for(var i = 0; i < str1.length; i++) {
+      hash[str1[i]] = true;
+    }
+    
+    for(i =0; i < str2.length; i++ ) {
+      if(!hash[str2[i]]) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+console.log('isPermutation : ' + isPermutation('abc', 'cba'));
+console.log('isPermutation : ' + isPermutation('abc', 'acv'));
