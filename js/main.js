@@ -189,3 +189,13 @@ console.log('isPermutation : ' + isPermutation('abc', 'acv'));
 ======================================================================================
   8. write a method to replace all spaces in astring with '20%' you may assume that the stiring has sufficient space at the end to hold the additional characters, and that you are given the true length of the string. (Note: if implemnting in JAVA, Please use a character Array so that you can perform this operation in place)
 */
+
+function replaceSpace(str) {
+  for(var i = 0; i < str.length; i++) {
+    if(str[i] === ' ') {
+      str = str.replace(' ', '20%');  
+    }
+  }
+  return str;
+}
+console.log('replaceSpace: ', replaceSpace('Mr John Smith.'));
