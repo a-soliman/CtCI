@@ -199,3 +199,12 @@ function replaceSpace(str) {
   return str;
 }
 console.log('replaceSpace: ', replaceSpace('Mr John Smith.'));
+ // ====================================================
+        //other way
+
+function replaceSpace2(str) {
+  str = str.replace(/ /g, '20%');
+  return str;
+}
+
+console.log('replaceSpace2 : ', replaceSpace2('Mr John Smith.'));
