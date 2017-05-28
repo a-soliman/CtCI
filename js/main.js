@@ -215,3 +215,32 @@ console.log('replaceSpace2 : ', replaceSpace2('Mr John Smith.'));
   ex. input: Tact Coa
       outPut: True(permutations: "taco cat", "atco cta", etc/)
 */
+
+function palindromePermutation(str) {
+  var hash = {};
+  var odds = 0;
+  
+  for(var i = 0; i < str.length; i++) {
+    if(str[i] !== ' ') {
+      if(!hash[str[i]]) {
+        hash[str[i]] = 1;
+      }
+      else {
+        hash[str[i]]++;
+      }
+    }
+  }
+  for(var key in hash) {
+    if(hash[key] % 2 === 1) {
+      odds++;
+    }
+  }
+  
+  if(odds === 1 || odds === 0) {
+    return true;
+  } else {
+    return false;
+  }
+  
+}
+console.log('palindromePermutation: ' + palindromePermutation('tact coa'))
