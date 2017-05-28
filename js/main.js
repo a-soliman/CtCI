@@ -208,3 +208,10 @@ function replaceSpace2(str) {
 }
 
 console.log('replaceSpace2 : ', replaceSpace2('Mr John Smith.'));
+
+/*
+======================================================================================
+  9. Palidrom Permutation: Given a string, write a function to check if it is a permutation of a plindrome. 
+  ex. input: Tact Coa
+      outPut: True(permutations: "taco cat", "atco cta", etc/)
+*/
