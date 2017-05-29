@@ -257,3 +257,10 @@ console.log('palindromePermutation: ' + palindromePermutation('tact coa'))
     pale, bale    -> true
     pale, bake    -> false
 */
+
+function oneAway(str1, str2) {
+  console.log('-------------------------------')
+  return 'YOU HAVE TO DO THIS!'
+}
+console.log('oneAway : ', oneAway('pale', 'ple'))
+console.log('-------------------------------')
