@@ -244,3 +244,16 @@ function palindromePermutation(str) {
   
 }
 console.log('palindromePermutation: ' + palindromePermutation('tact coa'))
+
+
+
+/*
+======================================================================================
+  10. One Away: There are three types of edits that can be performed on strings: A) insert a character, B) remove a character, c) replace a character.
+  Given two strings, write a function to check if they are one edit (or zero edits) away.
+  Examples : 
+    pale, ple     -> true
+    pales, pale   -> true
+    pale, bale    -> true
+    pale, bake    -> false
+*/
