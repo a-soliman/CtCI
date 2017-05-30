@@ -264,3 +264,9 @@ function oneAway(str1, str2) {
 }
 console.log('oneAway : ', oneAway('pale', 'ple'))
 console.log('-------------------------------')
+
+/*
+======================================================================================
+  11. stringComperssion: Implement a mthod to perform basic string compression using counts of repeated characters, for example aabcccccaaa -> a2b1c5a3,
+  if the compressed string would not become smaller than the original string, your method should return the original string, you may assume the string has only uppercase and lowercase letters(a-z)
+*/
