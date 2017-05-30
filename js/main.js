@@ -270,3 +270,24 @@ console.log('-------------------------------')
   11. stringComperssion: Implement a mthod to perform basic string compression using counts of repeated characters, for example aabcccccaaa -> a2b1c5a3,
   if the compressed string would not become smaller than the original string, your method should return the original string, you may assume the string has only uppercase and lowercase letters(a-z)
 */
+function stringComperssion(str) {
+  var commpressed = '';
+  var count = 1;
+  
+  for(var i = 0; i < str.length; i++) {
+    if(str[i] !== str[i-1]) {
+      count = 1;
+      commpressed += str[i];
+      commpressed += count;
+    }
+    
+    else {
+      count++;
+      commpressed = commpressed.slice(0, -1);
+      commpressed += count;
+    }
+  }
+  return commpressed.length < str.length ? commpressed : str;
+}
+
+console.log('stringComperssion : ' + stringComperssion('aabcccccaaa'));
