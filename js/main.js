@@ -296,3 +296,13 @@ console.log('stringComperssion : ' + stringComperssion('aabcccccaaa'));
   12. rotateMatrix: Given an image represented by N * N matrix, where each pixel in the image is 4 bytes, write a function to rotate the image by 90 degrees. 
   Can you do that in place?
 */
+
+var matr = [[1, 2, 3, 4],
+            [5, 6, 7, 8],
+            [9, 10,11,12],
+            [13,14,15,16],]
+
+var matr1 = [[1, 2, 3, 4],
+            [5, 6, 7, 8],
+            [9, 10,11,12],
+            [13,14,15,16],]
