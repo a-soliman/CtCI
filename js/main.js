@@ -306,3 +306,30 @@ var matr1 = [[1, 2, 3, 4],
             [5, 6, 7, 8],
             [9, 10,11,12],
             [13,14,15,16],]
+
+                        
+function rotate90(image) {
+  var y = image.length-1;
+  var z = image.length-1;
+  var limit = image.length-1
+  
+  for(var i = 0; i <image.length; i++) {
+    for(var j = 0; j < limit; j++) {
+      if(j >= i) {
+       
+      [image[i][j], image[j][y]] = [image[j][y], image[i][j]];
+      [image[i][j], image[y][z]] = [image[y][z], image[i][j]];
+      [image[i][j], image[z][i]] = [image[z][i], image[i][j]];  
+      
+      z--; 
+      }
+    }
+    y--;
+    z = y
+    limit--;
+  }
+  return image
+  
+}
+
+console.log('rotate  90%:' + rotate90(matr))
