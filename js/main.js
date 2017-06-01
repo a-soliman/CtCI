@@ -307,7 +307,7 @@ var matr1 = [[1, 2, 3, 4],
             [9, 10,11,12],
             [13,14,15,16],]
 
-                        
+
 function rotate90(image) {
   var y = image.length-1;
   var z = image.length-1;
@@ -333,3 +333,39 @@ function rotate90(image) {
 }
 
 console.log('rotate  90%:' + rotate90(matr))
+
+function rotate180(image) {
+ var y = image.length-1;
+ var z = image.length-1;
+ var type;
+ 
+ //find the type odd or even
+ if(image.length %2 === 0) {
+   type = 'even';
+ } else {
+   type = 'odd';
+ }
+ 
+ 
+ for(var i = 0; i < image.length; i++) {
+   for(var j = 0; j < image.length; j++) {
+     //swap
+     [image[i][j], image[y][z]] = [image[y][z], image[i][j]];
+     z--;
+     
+     if(type === 'odd') {
+      if(j === (Math.floor(image.length /2)) && i === (Math.floor(image.length /2))) {
+        return;
+      }  
+     } else {
+       if(j === image.length-1 && i === Math.floor((image.length-1)/2)) {
+          return image;
+       }
+     }
+   }
+   y--;
+   z = image.length-1;
+ }
+}
+
+console.log('rotate 180% : '+ rotate180(matr1))
