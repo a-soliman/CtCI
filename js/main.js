@@ -374,3 +374,37 @@ console.log('rotate 180% : '+ rotate180(matr1))
 ======================================================================================
   13. ZeroMatrix: write an algorith such that if an element in an M*N matrix, is 0, its entire row and culumn are set to 0.
 */
+
+var zeroM = [[1,2,3,4], [5,0,7,8], [9,10,11,12]];
+
+function ZeroMatrix(matrix) {
+  zeros = [];
+  
+  //find zeros
+  for(var i = 0; i < matrix.length; i++) {
+    for(var j = 0; j < matrix[0].length;j++) {
+      if(matrix[i][j] === 0) {
+        zeros.push([i,j]);
+      }
+    }
+  }
+  
+  // convert in accoring to x and y.
+  for(z = 0; z < zeros.length; z++) {
+    var x = zeros[z][0];
+    var y = zeros[z][0];
+    
+    for(i = 0; i < matrix.length; i++) {
+      for(j = 0; j < matrix[0].length; j++) {
+        if(i === x || i === y || j ===x || j === y) {
+          matrix[i][j] = 0;
+        }
+      }
+    }
+  }
+  return matrix;
+}
+
+console.log('ZeroMatrix : ' + ZeroMatrix(zeroM))
+
+
