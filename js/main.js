@@ -369,3 +369,8 @@ function rotate180(image) {
 }
 
 console.log('rotate 180% : '+ rotate180(matr1))
+
+/*
+======================================================================================
+  13. ZeroMatrix: write an algorith such that if an element in an M*N matrix, is 0, its entire row and culumn are set to 0.
+*/
