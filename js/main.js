@@ -411,3 +411,107 @@ console.log('ZeroMatrix : ' + ZeroMatrix(zeroM))
   14. stringRotation: Assume you have a method "isSubstring" which checks if one word is substring of another, Given two strings, s1, s2, write code to check if s2 is a rotation of s1, using only one call to "isSubstring".
   ex. "waterbottle" is a rotation of "erbottlewat".
 */
+
+/*
+======================================================================================
+======================================================================================
+======================================================================================
+========================= Creating a Linked List =====================================
+*/
+
+function LinkedList() {
+  this.head = null;
+  this.tail = null;
+}
+function Node(value, next, prev) {
+  this.value = value;
+  this.next = null;
+  this.prev = null;
+}
+LinkedList.prototype.addToHead = function(value) {
+  var newNode = new Node(value);
+  
+  if(!this.head) {
+    this.tail = newNode;
+  }
+  else {
+    newNode.next = this.head;
+    this.head.prev = newNode
+  }
+  this.head = newNode;
+}
+
+LinkedList.prototype.addToTail = function(value) {
+  var newNode = new Node(value);
+  
+  if(!this.tail) {
+    this.head = newNode;
+  }
+  else {
+    newNode.prev = this.tail;
+    this.tail.next = newNode;
+  }
+  this.tail = newNode;
+}
+
+LinkedList.prototype.removeHead = function() {
+  if(!this.head) {
+    return null
+  }
+  else if(this.head === this.tail) {
+    this.head = null;
+    this.tail = null;
+  }
+  else {
+    this.head = this.head.next;
+    this.head.prev = null;
+  }
+}
+LinkedList.prototype.removeTail = function() {
+  if(!this.tail) {
+    return null;
+  }
+  else if(this.tail === this.head) {
+    this.head = null;
+    this.tail = null;
+  }
+  else {
+    this.tail = this.tail.prev;
+    this.tail.next = null;
+  }
+}
+
+LinkedList.prototype.size = function() {
+  if(!this.head) {
+    return 0;
+  }
+  else {
+    var size= 0;
+    var currentNode = this.head;
+    while(currentNode) {
+      size++;
+      currentNode = currentNode.next;
+    }
+  }
+  return size;
+}
+LinkedList.prototype.retriveAll = function() {
+  var values = [];
+  var currentNode = this.head;
+  while(currentNode) {
+    values.push(currentNode.value);
+    
+    currentNode = currentNode.next;
+  }
+  return values;
+}
+
+var ll = new LinkedList();
+
+ll.addToHead(2);
+ll.addToHead(4);
+ll.addToHead(2);
+ll.addToHead(4);
+ll.addToHead(5);
+ll.addToTail(3);
+console.log('linkedlist size() : ' + ll.size())
