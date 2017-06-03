@@ -406,5 +406,8 @@ function ZeroMatrix(matrix) {
 }
 
 console.log('ZeroMatrix : ' + ZeroMatrix(zeroM))
-
-
+/*
+======================================================================================
+  14. stringRotation: Assume you have a method "isSubstring" which checks if one word is substring of another, Given two strings, s1, s2, write code to check if s2 is a rotation of s1, using only one call to "isSubstring".
+  ex. "waterbottle" is a rotation of "erbottlewat".
+*/
