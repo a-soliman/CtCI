@@ -541,3 +541,32 @@ function removeDubs(linkedlist) {
   return linkedlist;
 }
 console.log('removeDubs : ' + removeDubs(ll).size())
+
+
+//==========================================================
+//======================= Without buffer ===================
+
+function removeDubsNoBuffer(linkedlist) {
+  var currentNode = linkedlist.head;
+  
+    var findDub = function(ll, node) {
+      var otherNode = node.next;
+      
+      while(otherNode) {
+        if (node.value === otherNode.value) {
+          otherNode.prev.next = otherNode.next;
+          otherNode.next.prev = otherNode.prev;
+        }
+        otherNode = otherNode.next
+      }
+      return linkedlist;
+    }
+    
+  while(currentNode) {
+    findDub(linkedlist, currentNode);
+    currentNode = currentNode.next;
+  }
+  return linkedlist;
+}
+
+console.log('removeDubsNoBuffer : ' + removeDubsNoBuffer(ll).size())
