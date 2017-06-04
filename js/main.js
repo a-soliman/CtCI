@@ -522,3 +522,22 @@ console.log('linkedlist size() : ' + ll.size())
   
   Follow up : How would you do it without using temporary buffer.
 */
+
+function removeDubs(linkedlist) {
+  var currentNode = linkedlist.head;
+  var hash = {};
+  
+  while(currentNode) {
+    if(!hash[currentNode.value]) {
+      hash[currentNode.value] = true;
+    } 
+    
+    else {
+      currentNode.prev.next = currentNode.next;
+      currentNode.next.prev = currentNode.prev;
+    }
+    currentNode = currentNode.next;
+  }
+  return linkedlist;
+}
+console.log('removeDubs : ' + removeDubs(ll).size())
