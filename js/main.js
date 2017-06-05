@@ -584,3 +584,26 @@ LL2.addToHead(4);
 LL2.addToHead(2);
 LL2.addToHead(4);
 LL2.addToHead(5);
+
+function KthToLast(linkedlist, target) {
+  var result = [];
+  var currentIndex = 0;
+  var currentNode = linkedlist.head;
+  
+  while(currentNode) {
+    currentIndex++;
+    if(currentIndex === target) {
+      while(currentNode) {
+        result.push(currentNode);
+        currentNode = currentNode.next;
+      }
+    }
+    if(result.length) {
+      return result;
+    }
+    currentNode = currentNode.next
+  }
+}
+
+console.log('KthToLast : ' + KthToLast(LL2, 3))
+
