@@ -576,3 +576,11 @@ console.log('removeDubsNoBuffer : ' + removeDubsNoBuffer(ll).size())
 ======================================================================================
   16. KthToLast: Implement an algorithm to find the KthToLast element of a singly linked list.
 */
+
+var LL2 = new LinkedList()
+LL2.addToHead(3);
+LL2.addToHead(2);
+LL2.addToHead(4);
+LL2.addToHead(2);
+LL2.addToHead(4);
+LL2.addToHead(5);
