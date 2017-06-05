@@ -570,3 +570,9 @@ function removeDubsNoBuffer(linkedlist) {
 }
 
 console.log('removeDubsNoBuffer : ' + removeDubsNoBuffer(ll).size())
+
+
+/*
+======================================================================================
+  16. KthToLast: Implement an algorithm to find the KthToLast element of a singly linked list.
+*/
