@@ -612,3 +612,34 @@ console.log('KthToLast : ' + KthToLast(LL2, 3))
   17. deleteMiddleNode: Implement an algorithm to delete a node in the middle of  a linkedlist(ie, any node but the first and the last)
   of a singly linked list, given only access to that node
 */
+function singlyLinkedList() {
+  this.head = null;
+  this.tail = null;
+}
+function singlyNode(value) {
+  this.value = value;
+  this.next = null;
+}
+singlyLinkedList.prototype.addToHead = function(value) {
+  if(typeof value !== Object) {
+    var newNode = new singlyNode(value);
+  } else {
+    var newNode = value;
+  }
+    if(!this.head) {
+      this.tail = newNode;
+    } else {
+      newNode.next = this.head;
+    }
+    this.head = newNode
+}
+singlyLinkedList.prototype.size = function() {
+  if(!this.head) { return null;}
+  var count = 0, currentNode = this.head;
+  
+  while(currentNode) {
+    count++;
+    currentNode = currentNode.next;
+  }
+  return count;
+}
