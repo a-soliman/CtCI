@@ -607,3 +607,8 @@ function KthToLast(linkedlist, target) {
 
 console.log('KthToLast : ' + KthToLast(LL2, 3))
 
+/*
+======================================================================================
+  17. deleteMiddleNode: Implement an algorithm to delete a node in the middle of  a linkedlist(ie, any node but the first and the last)
+  of a singly linked list, given only access to that node
+*/
