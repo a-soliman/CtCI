@@ -652,3 +652,18 @@ sLL.addToHead(2)
 sLL.addToHead(4)
 sLL.addToHead(5)
 console.log(sLL.size())
+
+function deleteMiddleNode(linkedlist, node) {
+  if(!node.next) {
+    node = null;
+  }
+  else {
+    node.value = node.next.value;
+    node.next = node.next.next;
+  }
+  console.log(linkedlist)
+  return linkedlist;
+}
+
+console.log('deleteMiddleNode : ' + deleteMiddleNode(sLL, sLL.head.next.next).size())
+
