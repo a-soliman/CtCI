@@ -643,3 +643,12 @@ singlyLinkedList.prototype.size = function() {
   }
   return count;
 }
+
+var sLL = new singlyLinkedList()
+sLL.addToHead(3)
+sLL.addToHead(2)
+sLL.addToHead(4)
+sLL.addToHead(2)
+sLL.addToHead(4)
+sLL.addToHead(5)
+console.log(sLL.size())
