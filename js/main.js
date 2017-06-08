@@ -682,3 +682,32 @@ var linked2 = new LinkedList();
 linked2.addToHead(2);
 linked2.addToHead(9);
 linked2.addToHead(5);
+
+function sumListBW(list1, list2) {
+  var remaining = 0, total = 0, node1 = list1.head, node2 = list2.head;
+  var answer = new LinkedList();
+  while(node1 || node2) {
+    if(!node1) {
+      total = node2.value + remaining;
+    }
+    else if(!node2) {
+      total = node1.value + remaining;
+    }
+    else {
+      total = node1.value + node2.value + remaining;
+    }
+    
+    remaining = 0;
+    
+    if(total <= 9 ) {
+      answer.addToTail(total)
+    } else {
+      remaining = 1;
+      answer.addToTail(total % 10);
+    }
+    node1 = node1.next;
+    node2 = node2.next;
+  }
+  return answer;
+}
+console.log('sumListBW: ', sumListBW(linked1, linked2))
