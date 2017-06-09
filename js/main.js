@@ -711,3 +711,56 @@ function sumListBW(list1, list2) {
   return answer;
 }
 console.log('sumListBW: ', sumListBW(linked1, linked2))
+
+//================================================
+console.log('-----------------------------------')
+//=================== Follow Up ==================
+
+function sumListFW(list1, list2) {
+  var arr1 = [], arr2 = [], remaining =0, total =0;
+  var maxLength;
+  var node1 = list1.head, node2 = list2.head;
+  var result = new LinkedList();
+  
+  //while loop to fill the arrs
+  while(node1 || node2) {
+    if(node1) {
+      arr1.push(node1.value);
+    }
+    if(node2) {
+      arr2.push(node2.value);
+    }
+    node1 = node1.next;
+    node2 = node2.next;
+  }
+  
+  maxLength = Math.max(arr1.length, arr2.length);
+  //macking the calculation
+  for(var i = 0; i < maxLength; i++) {
+    if(arr1[i] && arr2[i]) {
+      total = arr1[i] + arr2[i] + remaining;
+    }
+    else if(!arr1[i] && arr2[i]) {
+      total = arr2[i] + remaining;
+    }
+    else if(!arr2[i] && arr1[i]){
+      total = arr2[i] + remaining;
+    } else {
+      total = remaining
+    }
+    remaining = 0;
+    
+    if(total <= 9) {
+      result.addToHead(total)
+    } else {
+      remaining = 1;
+      result.addToHead(total % 10);
+    }
+    
+  }
+  return result;
+}
+
+console.log('sumListFW: ', sumListFW(linked1, linked2))
+
+console.log('-----------------------------------')
