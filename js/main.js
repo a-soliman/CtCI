@@ -764,3 +764,9 @@ function sumListFW(list1, list2) {
 console.log('sumListFW: ', sumListFW(linked1, linked2))
 
 console.log('-----------------------------------')
+
+/*
+======================================================================================
+  20. palindromeList: Implement a function to check if a liked list is a plindrome;
+
+  
