@@ -769,4 +769,11 @@ console.log('-----------------------------------')
 ======================================================================================
   20. palindromeList: Implement a function to check if a liked list is a plindrome;
 
-  
+  */
+var pList = new LinkedList();
+pList.addToHead(5);
+pList.addToHead(4);
+pList.addToHead(1);
+pList.addToHead(4);
+pList.addToHead(5);
+
