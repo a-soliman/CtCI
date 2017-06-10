@@ -777,3 +777,18 @@ pList.addToHead(1);
 pList.addToHead(4);
 pList.addToHead(5);
 
+function palindromeList(list) {
+  //1 . retriveAll values;
+  var values = [];
+  var currentNode = list.head;
+  while(currentNode) {
+    values.push(currentNode.value);
+    currentNode = currentNode.next;
+  }
+  //2. check if palindrom
+  return values.join('') === values.reverse().join('');
+}
+
+console.log('palindromeList: ' + palindromeList(pList));
+
+console.log('-----------------------------------')
