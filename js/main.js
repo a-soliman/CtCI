@@ -792,3 +792,9 @@ function palindromeList(list) {
 console.log('palindromeList: ' + palindromeList(pList));
 
 console.log('-----------------------------------')
+
+/*
+======================================================================================
+  21. Intersection: Given two (singly) linkedlists, determine if the two lists intersect. Return the intersection node, 
+  Note -> the intersection is defined bassed on referance, not value. that is if the kth node of the first list is the exact note by referance as the jth node of the second linkedlist, then thet are intersecting.
+*/
