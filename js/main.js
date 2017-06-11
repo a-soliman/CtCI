@@ -798,3 +798,51 @@ console.log('-----------------------------------')
   21. Intersection: Given two (singly) linkedlists, determine if the two lists intersect. Return the intersection node, 
   Note -> the intersection is defined bassed on referance, not value. that is if the kth node of the first list is the exact note by referance as the jth node of the second linkedlist, then thet are intersecting.
 */
+
+var obj = {}
+obj.value = 5;
+
+var listA = new singlyLinkedList();
+
+listA.addToHead(obj)
+listA.addToHead(3);
+listA.addToHead(4);
+listA.addToHead(6)
+
+var listB = new singlyLinkedList();
+
+listB.addToHead(obj);
+listB.addToHead(4);
+listB.addToHead(2);
+listB.addToHead(6);
+
+function intersectingList(l1, l2) {
+  var currentNode = l1.head;
+  var intersection;
+  
+  //  helper function
+  function find(node, list) {
+    var otherNode = list.head
+    while(otherNode) {
+      if(node.value === otherNode.value) {
+        if(Object.keys(node).length === Object.keys(otherNode).length) {
+          for(var i in node) {
+            if(node[i] !== otherNode[i]) {
+              return;
+            }
+          }
+          intersection = node;
+        }
+      }
+      otherNode = otherNode.next;
+    }
+  }
+  
+  while(currentNode) {
+    find(currentNode, listB);
+    currentNode = currentNode.next;
+  }
+  return intersection;
+}
+console.log('intersectingList : ' + intersectingList(listA, listB));
+console.log('-----------------------------------')
