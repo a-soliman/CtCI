@@ -851,3 +851,19 @@ console.log('-----------------------------------')
 ======================================================================================
   22. loopDetection: Given a circulat linked list, Implement an algorithm that returns the node at the begining of the loop
 */
+
+var circulatList = new singlyLinkedList()
+
+circulatList.addToHead('l')
+circulatList.addToHead('k')
+circulatList.addToHead('j')
+circulatList.addToHead('i')
+circulatList.addToHead('h')
+circulatList.addToHead('g')
+circulatList.addToHead('f')
+circulatList.addToHead('e')
+circulatList.addToHead('d')
+circulatList.addToHead('c')
+circulatList.addToHead('b')
+circulatList.addToHead('a')
+circulatList.tail.next = circulatList.head.next.next.next
