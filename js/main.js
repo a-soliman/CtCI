@@ -846,3 +846,8 @@ function intersectingList(l1, l2) {
 }
 console.log('intersectingList : ' + intersectingList(listA, listB));
 console.log('-----------------------------------')
+
+/*
+======================================================================================
+  22. loopDetection: Given a circulat linked list, Implement an algorithm that returns the node at the begining of the loop
+*/
