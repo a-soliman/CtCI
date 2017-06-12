@@ -867,3 +867,21 @@ circulatList.addToHead('c')
 circulatList.addToHead('b')
 circulatList.addToHead('a')
 circulatList.tail.next = circulatList.head.next.next.next
+
+function loopDetection(list) {
+  var currentNode = list.head;
+  var s = currentNode, f = currentNode;
+  while(currentNode) {
+    
+    if(s.value == f.value) {
+      return true;
+    }
+    s = s.next;
+    f = f.next.next;
+    currentNode = currentNode.next
+  }
+  return false;
+}
+
+console.log('loopDetection : ' + loopDetection(circulatList));
+console.log('-----------------------------------')
