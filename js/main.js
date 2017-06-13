@@ -885,3 +885,42 @@ function loopDetection(list) {
 
 console.log('loopDetection : ' + loopDetection(circulatList));
 console.log('-----------------------------------')
+//======================================================================================
+//======================================================================================
+          // building a stack
+function Stack() {
+  this.storage = [];
+  this.min = [];
+}
+//pop push, peek isEmpty
+Stack.prototype.pop = function() {
+  var val = this.storage.pop();
+  if(val = this.min[this.min-1]) {
+    this.min.pop();
+  }
+  return val;
+}
+Stack.prototype.push = function(value) {
+  this.storage.push(value);
+  if(value <= this.min[this.min.length-1]) {
+    this.min.push(value);
+  }
+}
+Stack.prototype.peek = function() {
+  var val = this.storage[this.storage.length-1];
+  return val;
+}
+Stack.prototype.isEmpty = function() {
+  return this.storage.length == 0 ? true : false;
+}
+
+var stack = new Stack();
+stack.push(4)
+stack.push(3)
+stack.push(2)
+stack.push(1)
+console.log(stack)
+
+/*
+======================================================================================
+
