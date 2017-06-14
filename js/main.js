@@ -936,3 +936,7 @@ Stack.prototype.min = function() {
 console.log('-----------------------------------')
 /*
 ======================================================================================
+
+  24. stckOfPlates: imagine a (literal) stack of plates. if the stak gets too high, it mighty topple therefore, in real life stack, we would likely start a  new stack when the previous one exceeds some threhold. Implement a data-structure SetOfStacks that mimics this SetOfStacks should be SetOfStacks.push() and SetOfStacks.pop(), should behave identically to a single stack.
+  That is pop should return the same value as it would if there were just a single stack;
+*/
