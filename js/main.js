@@ -940,3 +940,35 @@ console.log('-----------------------------------')
   24. stckOfPlates: imagine a (literal) stack of plates. if the stak gets too high, it mighty topple therefore, in real life stack, we would likely start a  new stack when the previous one exceeds some threhold. Implement a data-structure SetOfStacks that mimics this SetOfStacks should be SetOfStacks.push() and SetOfStacks.pop(), should behave identically to a single stack.
   That is pop should return the same value as it would if there were just a single stack;
 */
+
+function SetOfStacks(n){
+  this.max = n;
+  this.count = 0;
+  this.storage = [[]]
+}
+SetOfStacks.prototype.push = function(value) {
+  if(this.storage[this.count].length === this.max) {
+    this.count++;
+    this.storage[this.count] = [];
+  }
+  this.storage[this.count].push(value);
+}
+SetOfStacks.prototype.pop = function() {
+  var val = this.storage[this.count][this.storage[this.count].length-1]
+  this.storage[this.count].pop();
+  return val;
+}
+var setof = new SetOfStacks(3);
+setof.push(1);
+setof.push(2);
+setof.push(3);
+setof.push(4);
+setof.push(5);
+setof.push(6);
+setof.push(7);
+setof.push(8);
+setof.push(9);
+//console.log(setof.pop())
+console.log(setof)
+console.log('---------------')
+//======================================================================================
