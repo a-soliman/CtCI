@@ -977,3 +977,29 @@ console.log('Follow Up')
 console.log('---------------')
 //    Follow up
 // Implement a function popAt(index) which performs a pop operation on a spacific sub- stack
+
+SetOfStacks.prototype.popAt = function(index) {
+  var count = 0;
+  
+  for(var i = 0; i < this.storage.length; i++) {
+    for(j = 0; j < this.max; j++) {
+      count++
+      if(count === index) {
+        var val = this.storage[i][j];
+        this.storage[i].splice(j, 1);
+      }
+    }
+  }
+  for(i = 0; i < this.storage.length; i++) {
+    if(this.storage[i].length < this.max && this.storage[i+1]) {
+      this.storage[i].push(this.storage[i+1][0]);
+      this.storage[i+1].splice(0,1);
+    }
+  }
+  return val == undefined ? null: val;
+}
+
+console.log(setof.popAt(9))
+console.log(setof)
+/*
+======================================================================================
