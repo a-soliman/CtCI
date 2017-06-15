@@ -972,3 +972,8 @@ setof.push(9);
 console.log(setof)
 console.log('---------------')
 //======================================================================================
+
+console.log('Follow Up')
+console.log('---------------')
+//    Follow up
+// Implement a function popAt(index) which performs a pop operation on a spacific sub- stack
