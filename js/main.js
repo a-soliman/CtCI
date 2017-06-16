@@ -1003,3 +1003,7 @@ console.log(setof.popAt(9))
 console.log(setof)
 /*
 ======================================================================================
+
+======================================================================================
+  26. Animal shulter: an animal shulter which holds only dogs and cats operats on a strictly "first in first out " basic, people must adopt either the oldest "based on arrival time =", of all animals ata the shelter or they can selct whether they would prefer a dog or a cat, (and will receive the oldest animal of that type) they cannot select a specific animal. create the data-structure to maintain this system and Implement operations such as enqueue, dequeue.
+*/
