@@ -1007,3 +1007,48 @@ console.log(setof)
 ======================================================================================
   26. Animal shulter: an animal shulter which holds only dogs and cats operats on a strictly "first in first out " basic, people must adopt either the oldest "based on arrival time =", of all animals ata the shelter or they can selct whether they would prefer a dog or a cat, (and will receive the oldest animal of that type) they cannot select a specific animal. create the data-structure to maintain this system and Implement operations such as enqueue, dequeue.
 */
+
+function animal(type, name, age) {
+  this.type = type;
+  this.name = name;
+  this.age = age;
+}
+
+function shulterQueue() {
+  this.queue = [];
+}
+shulterQueue.prototype.receiveAnAnimal = function(animal) {
+  this.queue.push(animal);
+};
+
+shulterQueue.prototype.adopt = function(type) {
+  var animal;
+  if(!type) {
+    animal = this.queue.shift();
+    return animal;
+  } else {
+    for(var i = 0; i < this.queue.length; i++) {
+      if(this.queue[i].type == type) {
+        animal = this.queue.splice(i, 1);
+      }
+    }
+  }
+  return animal;
+};
+
+var shulter = new shulterQueue()
+var roy = new animal('dog', 'Roy', '3');
+var shiba = new animal ('dog', 'shiba', '9')
+var poo = new animal ('cat', 'Poo', '4')
+var susu = new animal ('cat', 'Susu', '9');
+
+shulter.receiveAnAnimal(roy);
+shulter.receiveAnAnimal(poo);
+shulter.receiveAnAnimal(susu);
+shulter.receiveAnAnimal(shiba);
+
+console.log(shulter.adopt())
+console.log(shulter.adopt('dog'))
+console.log(shulter)
+
+console.log('-----------------------------------')
