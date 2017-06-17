@@ -1102,3 +1102,18 @@ Graph.prototype.addEdge = function(id1, id2) {
     this.totalEdges++;
   }
 };
+
+// removeEdge
+Graph.prototype.removeEdge = function(id1, id2) {
+  if(!this.vertices[id1] || !this.vertices[id2]) {
+    return null;
+  }
+  else if(this.vertices[id1].edges[id2]) {
+    delete this.vertices[id1].edges[id2];
+    delete this.vertices[id2].edges[id1];
+    
+    this.totalEdges--;
+  }
+  else {
+    return null;
+  }
