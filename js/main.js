@@ -1078,3 +1078,13 @@ Graph.prototype.addVertax = function(id) {
     return;
   }
 };
+
+//get Vertax
+Graph.prototype.getVertax = function(id) {
+  if(!this.vertices[id]) {
+    return null;
+  }
+  else {
+    return this.vertices[id];
+  }
+};
