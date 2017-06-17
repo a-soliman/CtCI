@@ -1052,3 +1052,29 @@ console.log(shulter.adopt('dog'))
 console.log(shulter)
 
 console.log('-----------------------------------')
+
+
+/*
+======================================================================================
+================= BUILDING GRAPH CONSTRUCTOR ====================
+
+*/
+console.log('------------- GRAPH --------------')
+function Graph() {
+  this.vertices = {};
+  this.totalVertices = 0;
+  this.totalEdges = 0;
+}
+function Vertax(id) {
+  id = {value: id, edges: {}};
+  return id;
+}
+// add Vertax
+Graph.prototype.addVertax = function(id) {
+  if(!this.vertices[id]) {
+    this.vertices[id] = new Vertax(id);
+    this.totalVertices++;
+  } else {
+    return;
+  }
+};
