@@ -1117,3 +1117,20 @@ Graph.prototype.removeEdge = function(id1, id2) {
   else {
     return null;
   }
+
+  //removeVertex
+Graph.prototype.removeVertex = function(id) {
+  if(this.vertices[id]) {
+    for(var neighbor in this.vertices[id].edges) {
+      delete this.vertices[neighbor].edges[id];
+      this.totalEdges--;
+    }
+    
+    delete this.vertices[id];
+    this.totalVertices--;
+  }
+  
+  else {
+    return null;
+  }
+};
