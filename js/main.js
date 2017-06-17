@@ -1088,3 +1088,17 @@ Graph.prototype.getVertax = function(id) {
     return this.vertices[id];
   }
 };
+
+
+// addEdge
+Graph.prototype.addEdge = function(id1, id2) {
+  if(!this.vertices[id1] || !this.vertices[id2]) {
+    return null;
+  }
+  else {
+    this.vertices[id1].edges[id2] = true;
+    this.vertices[id2].edges[id1] = true;
+    
+    this.totalEdges++;
+  }
+};
