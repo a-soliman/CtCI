@@ -1134,3 +1134,13 @@ Graph.prototype.removeVertex = function(id) {
     return null;
   }
 };
+
+// findNeighbors
+Graph.prototype.findNeighbors = function(id) {
+  if(this.vertices[id]) {
+    return this.vertices[id].edges;
+  }
+  else {
+    return null;
+  }
+};
