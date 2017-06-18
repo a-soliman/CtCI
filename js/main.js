@@ -1153,3 +1153,15 @@ Graph.prototype.forEachVertex = function(opertation) {
     }
   }
 };
+
+
+//forEachEdge
+Graph.prototype.forEachEdge = function(opertation) {
+  for(var vertax in this.vertices) {
+    //console.log(this.vertices[vertax])
+    for(var neighbor in this.vertices[vertax].edges) {
+      var connection = [this.vertices[vertax].value , neighbor]
+      opertation(connection)
+    }
+  }
+};
