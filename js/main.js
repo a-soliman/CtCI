@@ -1144,3 +1144,12 @@ Graph.prototype.findNeighbors = function(id) {
     return null;
   }
 };
+
+//forEachVertex
+Graph.prototype.forEachVertex = function(opertation) {
+  for(var i in this.vertices) {
+    if(this.vertices[i]) {
+      opertation(this.vertices[i]);
+    }
+  }
+};
