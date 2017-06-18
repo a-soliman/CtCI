@@ -1165,3 +1165,13 @@ Graph.prototype.forEachEdge = function(opertation) {
     }
   }
 };
+
+var g = new Graph();
+g.addVertax(1)
+g.addVertax(2)
+g.addVertax(3)
+g.addVertax(4)
+g.addVertax(5)
+g.addEdge(1,5)
+
+console.log('-----------------------------------')
