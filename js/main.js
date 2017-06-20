@@ -1180,3 +1180,15 @@ console.log('-----------------------------------')
 ======================================================================================
   28. RouteBetweenNodes: Given a directed graph, design an algorithm to findout whether there is a route between two nodes; 
 */
+
+function RouteBetweenNodes (graph, node1, node2) {
+  if(graph.vertices[node1].edges[node2] || graph.vertices[node2].edges[[node1]]) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+console.log('RouteBetweenNodes : ' + RouteBetweenNodes(g, 1, 5))
+console.log('-----------------------------------')
