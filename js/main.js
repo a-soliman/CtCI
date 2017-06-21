@@ -1192,3 +1192,8 @@ function RouteBetweenNodes (graph, node1, node2) {
 
 console.log('RouteBetweenNodes : ' + RouteBetweenNodes(g, 1, 5))
 console.log('-----------------------------------')
+
+/*
+======================================================================================
+  30. minimalTree: given a sorted(icreasing order) array with unique intiger elements, write an algorithm to create a binary tree with minimal height
+*/
