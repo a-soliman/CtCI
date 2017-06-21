@@ -1197,3 +1197,54 @@ console.log('-----------------------------------')
 ======================================================================================
   30. minimalTree: given a sorted(icreasing order) array with unique intiger elements, write an algorithm to create a binary tree with minimal height
 */
+
+var arrInt = []
+
+for(var i = 1; i <= 10; i++) {
+  arrInt.push(i);
+}
+
+function BST(value) {
+  this.value = value;
+  this.left = null;
+  this.right = null;
+}
+function minTree(arr) {
+  
+  var mid = Math.floor(arr.length/2)
+  var root = new BST(arr[mid])
+  var left = arr.slice(0, mid);
+  var right = arr.slice(mid+1, arr.length)
+  
+  function build(subArr, node) {
+    if(subArr.length < 1) {
+      return
+    }
+    mid = Math.floor(subArr.length/2)
+    var newNode = new BST (subArr[mid])
+    var subLeft = subArr.slice(0, mid);
+    var subRight = subArr.slice(mid+1, subArr.length)
+    
+    
+    if(newNode.value < node.value) {
+      node.left = newNode;
+    }
+    
+    else if(newNode.value > node.value) {
+      node.right = newNode;
+    }
+    
+    build(subLeft, newNode)
+    build(subRight, newNode)
+  }
+  
+  build(left, root)
+  build(right, root)
+  
+  //console.log(root)
+  return root;
+}
+console.log('minTree ' + minTree(arrInt))
+
+console.log('-----------------------------------')
+
