@@ -1248,3 +1248,7 @@ console.log('minTree ' + minTree(arrInt))
 
 console.log('-----------------------------------')
 
+/*
+======================================================================================
+  31. listOfDepths: Given a binary tree, design an algorithm which creats a linked list of all the modes at each depth (rg. if you have a tree with depth D, you'll have a D linked lists)
+*/
