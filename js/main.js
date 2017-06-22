@@ -1252,3 +1252,34 @@ console.log('-----------------------------------')
 ======================================================================================
   31. listOfDepths: Given a binary tree, design an algorithm which creats a linked list of all the modes at each depth (rg. if you have a tree with depth D, you'll have a D linked lists)
 */
+var bTree = minTree(arrInt)
+
+
+function listOfDepths(tree) {
+  var depth = 1
+  var max = 1;
+  var result = [];
+  
+  function find(node, depth) {
+    max = Math.max(max, depth);
+    if(!result[depth-1]) {
+      result[depth-1] = [node.value];
+    }else {
+      result[depth-1].push(node.value)
+    }
+    if(node.left) {
+      find(node.left, depth+1);
+    }
+    if(node.right) {
+      find(node.right, depth+1);
+    }
+  }
+  find(tree, depth)
+  console.log(result);
+  return result
+}
+console.log('listOfDepths: ' + listOfDepths(bTree))
+
+
+
+console.log('-----------------------------------')
