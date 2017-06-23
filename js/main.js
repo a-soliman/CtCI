@@ -1294,3 +1294,36 @@ unbalncedT.left = new BST(9)
 unbalncedT.right = new BST(11)
 unbalncedT.left.left = new BST(8)
 unbalncedT.left.left.left = new BST(7)
+
+function isBalancedTree(tree) {
+  var leftDepth = 1;
+  var max = 1;
+  var rightDepth = 1;
+  
+  function isBalanced(node, depth) {
+    if(node.left) {
+      isBalanced(node.left, depth+1);
+    }
+    if(node.right) {
+      isBalanced(node.left, depth+1);
+    }
+    max = Math.max(max, depth)
+  }
+ isBalanced(tree.left, leftDepth);
+ leftDepth = max;
+ max = 1;
+ isBalanced(tree.right, rightDepth)
+ rightDepth = max;
+ 
+ if(leftDepth - rightDepth === 0 || leftDepth - rightDepth === 1 || leftDepth - rightDepth === -1) {
+   return true;
+ } else {
+   return false;
+ }
+ 
+}
+
+console.log('isBalancedTree : ' + isBalancedTree(unbalncedT));
+
+
+console.log('-----------------------------------')
