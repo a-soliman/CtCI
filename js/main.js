@@ -1288,3 +1288,9 @@ console.log('-----------------------------------')
 ======================================================================================
   32. checkBalanced: Implement a function to check if a binary tree is balanced. For the purpose of the question, a balanced tree is defined to be a tree such that the heights of the two subtrees of any node never differ by more than one.
 */
+
+var unbalncedT = new BST(10)
+unbalncedT.left = new BST(9)
+unbalncedT.right = new BST(11)
+unbalncedT.left.left = new BST(8)
+unbalncedT.left.left.left = new BST(7)
