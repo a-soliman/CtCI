@@ -1332,3 +1332,41 @@ console.log('-----------------------------------')
 ======================================================================================
   33. validateBST: implement a function to check if a binary tree is a binary search tree
 */
+
+
+function isValideTree(tree) {
+  //chack left
+  function checkLeft(node, root) {
+    if(!node) {
+      return;
+    }
+    
+    if(node.value > root.value || (node.left && node.left.value > node.value) || (node.right && node.right.value < node.value)) {
+      return false;
+    } else {
+      checkLeft(node.left, root);
+      checkLeft(node.right, root)
+    }
+    
+    return true
+  }
+  //check right;
+  function checkRight(node, root) {
+    if(!node) {
+      return;
+    }
+    
+    if(node.value < root.value || (node.left && node.left.value > node.value) || (node.right && node.right.value < node.value)) {
+      return false;
+    }
+    
+    return true;
+  }
+  if(checkLeft(tree.left, tree) && checkRight(tree.right, tree)) {
+    return true;
+  } else {
+    return false;
+  }
+  
+}
+console.log('isValideTree : ' + isValideTree(unbalncedT))
