@@ -1327,3 +1327,8 @@ console.log('isBalancedTree : ' + isBalancedTree(unbalncedT));
 
 
 console.log('-----------------------------------')
+
+/*
+======================================================================================
+  33. validateBST: implement a function to check if a binary tree is a binary search tree
+*/
