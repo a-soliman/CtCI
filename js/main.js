@@ -1435,3 +1435,44 @@ sTree.insert(7)
 sTree.insert(10)
 
 sTree.inOrderTraversal()
+
+function successor (tree) {
+  var result;
+  
+  function findSuccessor(node) {
+    if(node.left) {
+      findSuccessor(node.left)
+    }
+    else {
+      result = node.value;
+    }
+  }
+  
+  function findParentSuccesso(node) {
+    if(node.value > tree.value) {
+      result = node.value;
+      return;
+    }
+    if(node.parent) {
+      findParentSuccesso(node.parent)
+    }
+  }
+  
+  // ====
+  
+  if(tree.right) {
+    findSuccessor(tree.right);  
+  }
+  else if(tree.parent) {
+    findParentSuccesso(tree.parent)
+  }
+  
+  return result;
+}
+
+
+
+
+console.log('successor: ' + successor(sTree.right.left))
+
+
