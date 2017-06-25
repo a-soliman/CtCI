@@ -1422,3 +1422,16 @@ BST.prototype.inOrderTraversal = function() {
   build(this)
   return result;
 }
+
+var sTree = new BST(6);
+sTree.insert(3)
+sTree.insert(5)
+sTree.insert(2)
+sTree.insert(1)
+sTree.insert(4)
+sTree.insert(9)
+sTree.insert(8)
+sTree.insert(7)
+sTree.insert(10)
+
+sTree.inOrderTraversal()
