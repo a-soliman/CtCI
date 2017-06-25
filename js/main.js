@@ -1404,3 +1404,21 @@ BST.prototype.insert = function(value) {
     }
   }
 }
+
+
+BST.prototype.inOrderTraversal = function() {
+  var result = [];
+  
+  function build(tree) {
+    if(tree.left) {
+      build(tree.left);
+    }
+    result.push(tree.value);
+    
+    if(tree.right) {
+      build(tree.right);
+    }
+  }
+  build(this)
+  return result;
+}
