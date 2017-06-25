@@ -1383,3 +1383,24 @@ function BST(value) {
   this.right = null;
   this.parent = null;
 }
+
+BST.prototype.insert = function(value) {
+  var newNode = new BST(value);
+  
+  if(newNode.value <= this.value) {
+    if(!this.left) {
+      this.left = newNode;
+      newNode.parent = this;
+    } else {
+      this.left.insert(value);
+    }
+  }
+  else if(newNode.value > this.value) {
+    if(!this.right) {
+      this.right = newNode;
+      newNode.parent = this;
+    } else {
+      this.right.insert(value)
+    }
+  }
+}
