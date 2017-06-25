@@ -1370,3 +1370,9 @@ function isValideTree(tree) {
   
 }
 console.log('isValideTree : ' + isValideTree(unbalncedT))
+
+console.log('-----------------------------------')
+/*
+======================================================================================
+  34. successor: write an algorithm to find the next node in (ie. in order successor) of a given node in a binart seach tree, you may assume that each node  has a link to its parent.
+*/
