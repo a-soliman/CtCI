@@ -1474,5 +1474,15 @@ function successor (tree) {
 
 
 console.log('successor: ' + successor(sTree.right.left))
-
+console.log('-----------------------------------')
+/*
+======================================================================================
+  35. buildOrder : you are given a list of porjects and a list of dependencies (which is a list of pairs of projects, where the second project is dependent on the first project) All of a project dependencies must be built befor the project is. Find a build order that will allow the projects to be built.
+  if there is no valid build order, return an error.
+  
+  ex. PROJECTS:     a, b, c, d, e, f
+      DEPENDENCIES: (a,d), (f,b), (b,d), (f,a), (d,c)
+  
+  Output: f, e, a, b, d, c
+*/
 
