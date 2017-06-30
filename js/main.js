@@ -1486,3 +1486,46 @@ console.log('-----------------------------------')
   Output: f, e, a, b, d, c
 */
 
+var projectsList = ['a', 'b', 'c', 'd', 'e', 'f'];
+var dependenciesList = [['a','d'], ['f','b'], ['b','d'], ['f','a'], ['d','c']];
+
+function buildOrder(projects, dep) {
+  var result = {};
+  var resultLen = 0
+  
+  
+  while(resultLen < projects.length) {
+    
+    for(var i = 0; i < projects.length; i++) {
+      var tempFlag = false;
+      for(var j = 0; j < dep.length;j++) {
+        if(projects[i] === dep[j][1]) {
+          tempFlag = true;
+        }
+      }
+      if(tempFlag === false) {
+        result[projects[i]] = true;
+        resultLen++;
+      }
+    } 
+    
+      
+    for( i = 0; i < projects.length; i++) {
+      for( j = 0; j < dep.length; j++) {
+        if(!result[projects[i]] && projects[i] == dep[j][1]) {
+          if(result[dep[j][0]]) {
+            result[dep[j][1]] = true;
+            resultLen++;
+          }
+        }
+      }
+    }
+  }
+  
+  return Object.keys(result)
+}
+
+
+console.log('buildOrder:  ' + buildOrder(projectsList,dependenciesList ))
+
+console.log('-----------------------------------')
