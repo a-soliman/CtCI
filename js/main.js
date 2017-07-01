@@ -1546,3 +1546,19 @@ sTree.left.right.right = new BST(5)
 sTree.right = new BST(8)
 sTree.right.right = new BST(13)
 sTree.right.right.left = new BST(7)
+
+function LCI(root, n1, n2) {
+  if(!root) { return null; }
+  if(root == n1 || root == n2) { return root; }
+  
+  var left = LCI(root.left, n1, n2)
+  var right = LCI(root.right, n1, n2)
+  
+  if(!left && !right) { return null; }
+  if(left && right) { return root; }
+  
+  return left !== null ? left : right;
+}
+console.log('firstCommonAncestor: ' + LCI(sTree, sTree.right, sTree.right.right.left).value)
+
+console.log('-----------------------------------')
