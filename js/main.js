@@ -1529,3 +1529,10 @@ function buildOrder(projects, dep) {
 console.log('buildOrder:  ' + buildOrder(projectsList,dependenciesList ))
 
 console.log('-----------------------------------')
+
+
+/*
+======================================================================================
+  36. firstCommonAncestor: Design an algorithm and write code to find the first common ancestor of two nodes in a bianary tree. avoid storing additional nodes in a data data-structure. Note this is not necessarily a binary search tree
+  
+*/
