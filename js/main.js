@@ -1536,3 +1536,13 @@ console.log('-----------------------------------')
   36. firstCommonAncestor: Design an algorithm and write code to find the first common ancestor of two nodes in a bianary tree. avoid storing additional nodes in a data data-structure. Note this is not necessarily a binary search tree
   
 */
+
+var sTree = new BST(3)
+sTree.left = new BST(6)
+sTree.left.left = new BST(2)
+sTree.left.right = new BST(11)
+sTree.left.right.left = new BST(9)
+sTree.left.right.right = new BST(5)
+sTree.right = new BST(8)
+sTree.right.right = new BST(13)
+sTree.right.right.left = new BST(7)
