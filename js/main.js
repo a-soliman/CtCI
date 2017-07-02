@@ -1562,3 +1562,11 @@ function LCI(root, n1, n2) {
 console.log('firstCommonAncestor: ' + LCI(sTree, sTree.right, sTree.right.right.left).value)
 
 console.log('-----------------------------------')
+
+
+/*
+======================================================================================
+  37. BSTSequences: A binary search tree was created by traversing an array from left to right and inserting each element.
+  Given a binary search tree with distinct elements. print all possible arrys that cold have led to this tree;
+*/
+
