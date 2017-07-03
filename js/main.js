@@ -1599,3 +1599,55 @@ t2.insert(8)
 t2.insert(14)
 t2.insert(5)
 t2.insert(9)
+
+// == the function
+function checkSubtree(T1, T2) {
+ 
+  function findMatch(tree1, tree2) {
+    if(!tree1) {return false}
+     
+    if(tree1.value === tree2.value) {
+      return tree1;
+    }
+     
+    else if(tree1.value > tree2.value) {
+      return findMatch(tree1.left, tree2)
+    }
+     
+    else if(tree1.value < tree2.value) {
+      return findMatch(tree1.right, tree2)  
+    }   
+  }
+   
+   
+  if(findMatch(T1, T2)) {
+    var subTree = findMatch(T1, T2)
+  } else {
+    return false;
+  }
+  
+  function isIdentical(root1, root2) {
+    if((root1.value !== root2.value) || ((root1.left && !root2.left) || (!root1.left && root2.left)) || ((root1.right && !root2.right) || (!root1.right && root2.right))) {
+      console.log(root1.value + ', ' + root2.value)
+      return false;
+    }
+    if(root1.left && root2.left) {
+      return isIdentical(root1.left, root2.left)  
+    }
+    if(root1.right && root2.right) {
+      return isIdentical(root1.right, root2.right)  
+    }
+    return true
+  }
+  
+  if(isIdentical(subTree, T2)) {
+    return true;
+  } else {
+    return false
+  }
+   
+}
+console.log('checkSubtree : ' + checkSubtree(t1, t2))
+
+
+console.log('-----------------------------------')
