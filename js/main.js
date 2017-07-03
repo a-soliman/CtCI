@@ -1592,3 +1592,10 @@ t1.insert(14)
 t1.insert(5)
 t1.insert(9)
 t1.left.left.left.parent = null;
+
+// === creating T1 ===
+var t2 = new BST(10);
+t2.insert(8)
+t2.insert(14)
+t2.insert(5)
+t2.insert(9)
