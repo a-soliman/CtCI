@@ -1570,3 +1570,9 @@ console.log('-----------------------------------')
   Given a binary search tree with distinct elements. print all possible arrys that cold have led to this tree;
 */
 
+
+/*
+======================================================================================
+  38.  checkSubtree: T1 and T2 are two very large binary trees, with T1 much bigger than T2, create an algorithm to determin if T2 is a subtree of T1.
+*/
+// === creating T1 ===
