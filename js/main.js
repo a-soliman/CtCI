@@ -1576,3 +1576,19 @@ console.log('-----------------------------------')
   38.  checkSubtree: T1 and T2 are two very large binary trees, with T1 much bigger than T2, create an algorithm to determin if T2 is a subtree of T1.
 */
 // === creating T1 ===
+// === creating T1 ===
+var t1 = new BST(50);
+t1.insert(20)
+t1.insert(60)
+t1.insert(15)
+t1.insert(17)
+t1.insert(58)
+t1.insert(10)
+t1.insert(16)
+t1.insert(57)
+t1.insert(59)
+t1.insert(8)
+t1.insert(14)
+t1.insert(5)
+t1.insert(9)
+t1.left.left.left.parent = null;
