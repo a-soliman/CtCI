@@ -1650,4 +1650,9 @@ function checkSubtree(T1, T2) {
 console.log('checkSubtree : ' + checkSubtree(t1, t2))
 
 
-console.log('-----------------------------------')
+console.log('-----------------------------------');
+
+/*
+======================================================================================
+  39. GetRandomNode: you are implemnting a binary tree class from scrach which in addition to insert, find and delete has a method GetRandomNode(), which returns a random node fro the tree . all nodes should be equally likely to be chossen 
+*/
