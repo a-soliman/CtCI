@@ -1656,3 +1656,26 @@ console.log('-----------------------------------');
 ======================================================================================
   39. GetRandomNode: you are implemnting a binary tree class from scrach which in addition to insert, find and delete has a method GetRandomNode(), which returns a random node fro the tree . all nodes should be equally likely to be chossen 
 */
+
+BST.prototype.getRandomNode = function() {
+  var allNodes = [];
+  
+  function collectNodes(node) {
+    if(node) {
+      allNodes.push(node);
+      collectNodes(node.left);
+      collectNodes(node.right);
+    }
+    
+  }
+  collectNodes(this);
+  
+  if(allNodes.length) {
+    var randomNum = Math.floor(Math.random() * allNodes.length);
+    return allNodes[randomNum]
+  } else {
+    return null;
+  }
+}
+console.log('getRandomNode: ' + t2.getRandomNode().value);
+cons
