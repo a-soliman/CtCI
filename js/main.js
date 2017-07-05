@@ -1678,4 +1678,10 @@ BST.prototype.getRandomNode = function() {
   }
 }
 console.log('getRandomNode: ' + t2.getRandomNode().value);
-cons
+
+console.log('-----------------------------------')
+
+/*
+======================================================================================
+  40. Given a binary tree and a sum, return the path between the root and a leaf node that add up to the sum 
+*/
