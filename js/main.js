@@ -1692,3 +1692,25 @@ sumTree.left.right = new BST(-3)
 sumTree.right = new BST(5)
 sumTree.right.left = new BST(4)
 sumTree.right.right = new BST(11)
+
+function SumPath(node, sum, arr) {
+  if(!node) {return false;}
+  if(!node.left && !node.right) {
+    if(node.value === sum) {
+      arr.push(node.value);
+      return true;
+    } else { return false; }
+  }
+  
+  if(SumPath(node.left, (sum - node.value), arr)) {
+    arr.push(node.value);
+    return arr
+  }
+  if(SumPath(node.right, (sum - node.value), arr)) {
+    arr.push(node.value);
+    return arr
+  }
+  return false;
+}
+console.log('SumPath: ' + SumPath(sumTree, 26, []))
+console.log('-----------------------------------')
