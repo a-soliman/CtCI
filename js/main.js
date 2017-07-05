@@ -1685,3 +1685,10 @@ console.log('-----------------------------------')
 ======================================================================================
   40. Given a binary tree and a sum, return the path between the root and a leaf node that add up to the sum 
 */
+
+var sumTree = new BST(10);
+sumTree.left = new BST(16)
+sumTree.left.right = new BST(-3)
+sumTree.right = new BST(5)
+sumTree.right.left = new BST(4)
+sumTree.right.right = new BST(11)
