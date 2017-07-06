@@ -1727,3 +1727,22 @@ console.log('-----------------------------------')
 ======================================================================================
   42.TripleStep: A child is running up the staircase with n step and can hop either 1 step, 2 steps, or 3 steps at a time, implement a method to count how many possible ways the child can run up the stairs. 
 */
+
+function tripleStep(n) {
+  var memo = {};
+  function countWays(n) {
+    if(n < 0) { return 0; }
+    else if(n === 0) { return 1; }
+    else if(memo[n]) { return memo[n]; }
+    else {
+      memo[n] = countWays(n-1) + countWays(n-2) + countWays(n-3);
+    }
+    return memo[n];
+  }
+  countWays(n);
+  return memo[n];
+}
+
+console.log('42. TripleStep: ' + tripleStep(5));
+
+console.log('-----------------------------------')
