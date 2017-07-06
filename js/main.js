@@ -1714,3 +1714,16 @@ function SumPath(node, sum, arr) {
 }
 console.log('SumPath: ' + SumPath(sumTree, 26, []))
 console.log('-----------------------------------')
+
+/*
+======================================================================================
+  =========================================================
+  ========== Recursion and Dynamic Programming ============
+  =========================================================
+*/
+
+
+/*
+======================================================================================
+  42.TripleStep: A child is running up the staircase with n step and can hop either 1 step, 2 steps, or 3 steps at a time, implement a method to count how many possible ways the child can run up the stairs. 
+*/
