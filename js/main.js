@@ -1753,3 +1753,8 @@ console.log('-----------------------------------')
     the robot can only move in two directions right and down, but certin cells are "off limits" such that the robot can not step out of them,
     Design an algorithm to find a path for the robot from the top left to the bottom right.
 */
+
+var mat  = [
+            [0,1],
+            [2,3]
+          ]
