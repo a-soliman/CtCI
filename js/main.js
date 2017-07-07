@@ -1746,3 +1746,10 @@ function tripleStep(n) {
 console.log('42. TripleStep: ' + tripleStep(5));
 
 console.log('-----------------------------------')
+
+/*
+======================================================================================
+  43. RobotInGrid: Imagine a robot sitting on the upper left corner of a grid with r rows and c columns.
+    the robot can only move in two directions right and down, but certin cells are "off limits" such that the robot can not step out of them,
+    Design an algorithm to find a path for the robot from the top left to the bottom right.
+*/
