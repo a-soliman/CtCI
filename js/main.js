@@ -1758,3 +1758,25 @@ var mat  = [
             [0,1],
             [2,3]
           ]
+function RobotInGrid(r, c, matrix) {
+  var x =0, y = 0;
+  var routes = 0;
+  
+  function findRoutes(row, col) {
+    if(row > r || col > c) {
+      return;
+    }
+    else if(row === r-1 && col === c-1) {
+      routes++;
+      return;
+    }
+    else {
+      return findRoutes(row+1, col) + findRoutes(row, col+1);
+    }
+  }
+  findRoutes(x, y);
+  return routes;
+}
+
+console.log('RobotInGrid: ' + RobotInGrid(mat.length, mat[0].length, mat));
+console.log('-----------------------------------')
